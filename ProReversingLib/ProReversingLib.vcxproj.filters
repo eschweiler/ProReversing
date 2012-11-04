@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ProReversing.cpp" />
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="NtGlobalFlag.cpp">
+      <Filter>ProTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="PebBeingDebugged.cpp">
+      <Filter>ProTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="PebHeapFlags.cpp">
+      <Filter>ProTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="ProTechnique.cpp">
+      <Filter>ProTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleCommunicator.cpp" />
+    <ClCompile Include="Debugger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ProReversing.h" />
+    <ClInclude Include="NtGlobalFlag.h">
+      <Filter>ProTechniques</Filter>
+    </ClInclude>
+    <ClInclude Include="PebBeingDebugged.h">
+      <Filter>ProTechniques</Filter>
+    </ClInclude>
+    <ClInclude Include="PebHeapFlags.h">
+      <Filter>ProTechniques</Filter>
+    </ClInclude>
+    <ClInclude Include="ProTechnique.h">
+      <Filter>ProTechniques</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleCommunicator.h" />
+    <ClInclude Include="Debugger.h" />
+    <ClInclude Include="System.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ProTechniques">
+      <UniqueIdentifier>{ac226c59-a60a-4588-977e-53042aa3a99a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="Systemx86.asm" />
+    <MASM Include="Systemx64.asm" />
+  </ItemGroup>
+</Project>
