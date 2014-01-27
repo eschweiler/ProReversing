@@ -59,9 +59,7 @@ namespace System
 
 		BYTE* peb = System::getPeb();
 		# ifdef _WIN64
-			if (!System::isAtleastVista())
-				throw exception("unsupported");
-			// vista_x64
+			// vista_x64 / xp_x64
 			pebProcessHeap = (BYTE*) (*(void**) (peb + 0x30));
 		#else
 			// valid for vista_x86, xp_x86

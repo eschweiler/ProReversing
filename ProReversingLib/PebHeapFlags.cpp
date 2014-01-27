@@ -18,10 +18,10 @@ ULONG* PebHeapFlags::getForceFlagPtr(BYTE* heap)
 {
 	
 	#ifdef _WIN64
-		if (!System::isAtleastVista())
-			throw exception("unsupported");
-			// return (ULONG*) (processHeap + 0x18);
-		return (ULONG*) (heap + 0x74);
+		if(System::isAtleastVista())
+			return (ULONG*) (heap + 0x74);
+        else
+            return (ULONG*) (heap + 0x18);
 	#else
 		if (System::isAtleastVista())
 			return (ULONG*) (heap + 0x44);
@@ -35,10 +35,10 @@ ULONG* PebHeapFlags::getForceFlagPtr(BYTE* heap)
 ULONG* PebHeapFlags::getFlagPtr(BYTE* heap)
 {
 	#ifdef _WIN64
-		if (!System::isAtleastVista())
-			throw exception("unsupported");
-			// return (ULONG*) (processHeap + 0x14);
-		return (ULONG*) (heap + 0x70);
+		if(System::isAtleastVista())
+			return (ULONG*) (heap + 0x70);
+        else
+		    return (ULONG*) (heap + 0x14);
 	#else
 		if (System::isAtleastVista())
 			return (ULONG*) (heap + 0x40);
